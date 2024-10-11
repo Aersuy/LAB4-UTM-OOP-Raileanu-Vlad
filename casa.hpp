@@ -1,29 +1,34 @@
 #pragma once
+#include <iostream>
 class Garaj
 {
 private:
      double c_suprafata{};
 public:
-    Garaj(/* args */);
-    ~Garaj();
+    Garaj();
+    double getSuprafata() const ;
+    void setSuprafata(double);
 };
 
 class Casa
 {
-private:
+protected:
     double c_suprafataOdaie;
     double c_suprafataBucatarie;
-    Garaj Garaj;
+    Garaj c_garaj;
+
 public:
-    Casa(/* args */);
-    ~Casa();
+    Casa();
+    virtual void print();
+    friend std::ostream& operator<<(std::ostream& out,const Casa&);
 };
 
 class Villa : public Casa
 { 
     private:
-     double c_pamantAdiacent{};
+     double c_terenAdiacent{};
     public:
     Villa();
-
+    void print();
+    friend std::ostream& operator<<(std::ostream& out,const Villa&);
 };
