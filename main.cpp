@@ -1,5 +1,5 @@
 #include "mobila.cpp"
-
+#include "casa.cpp"
 int main()
 {
     Scaun s(4);

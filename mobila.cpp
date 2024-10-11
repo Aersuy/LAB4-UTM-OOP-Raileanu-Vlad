@@ -1,3 +1,4 @@
+#pragma once
 #include "mobila.hpp"
 #include <iostream>
 Mobila::Mobila()

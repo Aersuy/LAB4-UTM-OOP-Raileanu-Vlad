@@ -1,7 +1,8 @@
+#pragma once
 class Garaj
 {
 private:
-    /* data */
+     double c_suprafata{};
 public:
     Garaj(/* args */);
     ~Garaj();
@@ -19,6 +20,10 @@ public:
 };
 
 class Villa : public Casa
-{
+{ 
+    private:
+     double c_pamantAdiacent{};
+    public:
+    Villa();
 
 };
